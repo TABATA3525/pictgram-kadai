@@ -10,10 +10,8 @@ class User < ApplicationRecord
     validates :password, 
       length: { in:8..32 },
       format: { with: /\A(?=.*?[a-zA-Z])(?=.*?\d)[a-zA-Z\d]+\z/}
-      
-    validates :password_confirmation, 
-      length: { in:8..32 },
-      format: { with: /\A(?=.*?[a-zA-Z])(?=.*?\d)[a-zA-Z\d]+\z/}
-    
+
     has_secure_password
+    
+    has_many :topics
 end
