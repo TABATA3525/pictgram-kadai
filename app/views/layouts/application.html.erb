@@ -4,7 +4,7 @@
     <title>Pictgram</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -23,8 +23,13 @@
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
             <li>
-              <%= link_to "#" do %>
+              <%= link_to favorites_index_path do %>
                 <%= image_tag "icons/heart.png" %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to topics_path do %>
+                <%= image_tag "icons/camera.png" %>
               <% end %>
             </li>
             <li>
