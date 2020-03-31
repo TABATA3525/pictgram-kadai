@@ -5,8 +5,7 @@ class CommentsController < ApplicationController
   end
   
   def create
-    comment = current_user.comments.new(comment_params)
-    comment.user_id = current_user.id
+    comment =current_user.comments.new(comment_params)
     comment.topic_id= params[:topic_id]
     
     if comment.save
