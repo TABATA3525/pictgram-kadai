@@ -23,7 +23,7 @@ h1, h2 {
 .top-hero-wrapper {
   width: 100vw;
   height: 100vh;
-  background-image: url('bg-top.png');
+  background-image: image-url('bg-top.png');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -149,6 +149,7 @@ h1, h2 {
 .fa-heart {
   color: #ff0000;
 }
+
 
 .comment-new-wrapper {
   padding-top: 120px;
